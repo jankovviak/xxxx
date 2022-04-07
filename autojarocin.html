@@ -17,6 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
   <meta name="description" content="prawa autorskie zastrzezone przez wykonawce; Alex Jankowiak">
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
   
   
   <title>AUTO JAROCIN</title>
@@ -35,6 +37,52 @@
   
  <script type="text/javascript" src="zegar.js"></script>
  <script type="text/javascript" src="stop.js"></script>
+	
+	<script type="text/javascript">
+
+  function myFunction() 
+	
+	{
+   
+		document.getElementById("demo").style.color = "red";
+
+    }
+
+    </script>
+	<script> 
+	function myFunction1() 
+	
+	{
+   
+		document.getElementById("demo").style.color = "white";
+
+    }
+
+    </script>
+	
+	<script>
+	
+	function sleep( sleepDuration )
+	{
+    	var now = new Date().getTime();
+    	while(new Date().getTime() < now + sleepDuration){} 
+	}
+	</script>
+	
+	<script>
+ 
+function stop() 
+	{
+
+		document.getElementById("oto");
+  sleep(17000);
+ 
+	}
+ 
+	</script>
+
+	
+	
 	
 </head>
 			<! ochrona strony>
@@ -173,9 +221,9 @@
                     <div class="text-wrapper">
                         <h6 class="card-title mbr-fonts-style mb-1 display-5">
                             <strong>Godziny otwarcia</strong></h6>
-                        <p class="mbr-text mbr-fonts-style display-7">
+                        <p class="mbr-text mbr-fonts-style display-7" onclick="myFunction()">
 							<a href="autojarocin.html#pytania"  class="text-primary">11:00 - 18:00*</a>
-						</p>
+						</p> 
                     </div>
                 </div>
             </div>
@@ -277,9 +325,9 @@
 				<div class="card mb-3">
                      <div class="card-header" role="tab" id="headingOne">
                         <!poczatek>
-							<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_7" aria-expanded="false" aria-controls="collapse1">
+							<a role="button" onclick="myVar = setTimeout(myFunction1, 1000) " class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_7" aria-expanded="false" aria-controls="collapse1">
 						<!koniec>
-                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>W jakich godzinach jesteśmy czynni weekendami?</strong></h6>
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7" id="demo"><strong>W jakich godzinach jesteśmy czynni weekendami?</strong></h6>
                                 <span class="sign mbr-iconfont mbri-arrow-down"></span>
                             </a>
                         </div>
@@ -357,7 +405,7 @@
 		  <!script> 	
 				<p onmouseover="continue();"></p>
 	      <!script>
-        <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="7" data-draggable="true">
+        <div id="oto" class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="7" data-draggable="true">
 			<div class="embla__viewport container-fluid">
                 <div class="embla__container">
                     <div class="embla__slide slider-image item active" style="margin-left: 10rem; margin-right: 10rem;">
@@ -373,7 +421,7 @@
                                 <p class="card-text mbr-fonts-style align-center display-4">SEDAN | COUPE | KOMBI | KOMPAKT | SUV<br>
 												<br>
 <form action="https://autojarocin.otomoto.pl" method="get" target="_blank">
-<input type="text" name="q">
+<input type="text" name="q" onclick="stop();">
 <input type="hidden" name="ie" value="utf-8">
 <input type="hidden" name="sitesearch" value="https://autojarocin.otomoto.pl">
 <input type="submit" value="Szukaj">
@@ -399,7 +447,7 @@
                                 <p class="card-text mbr-fonts-style align-center display-4">6-OSOBOWY | 9-OSOBOWY | FURGON<br>
 												<br>
 <form action="https://autojarocin.otomoto.pl" method="get" target="_blank">
-<input type="text" name="q" onclick="myszkaoff();">
+<input type="text" name="q" onclick="stop();">
 <input type="hidden" name="ie" value="utf-8">
 <input type="hidden" name="sitesearch" value="https://autojarocin.otomoto.pl">
 <input type="submit" value="Szukaj" background-color: #CC0000>
@@ -424,7 +472,7 @@
                                     SEDAN | COUPE | KOMBI | KOMPAKT | SUV<br>
 												<br>
 <form action="https://autojarocin.otomoto.pl" method="get" target="_blank">
-<input type="text" name="q" onclick="myszkaoff">
+<input type="text" name="q" onclick="stop">
 <input type="hidden" name="ie" value="utf-8">
 <input type="hidden" name="sitesearch" value="https://autojarocin.otomoto.pl">
 <input type="submit" value="Szukaj">
@@ -451,7 +499,7 @@
                                     6-OSOBOWY | 9-OSOBOWY | FURGON<br>
 												<br>
 <form action="https://autojarocin.otomoto.pl" method="get" target="_blank">
-<input type="text" name="q" onclick="myszkaoff();">
+<input type="text" name="q" onclick="stop();">
 <input type="hidden" name="ie" value="utf-8">
 <input type="hidden" name="sitesearch" value="https://autojarocin.otomoto.pl">
 <input type="submit" value="Szukaj">
